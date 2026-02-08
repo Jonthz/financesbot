@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#4F46E5">
+    <title>Dashboard Financiero</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Mi Dashboard Financiero</h1>
+            <p class="subtitle">Resumen mensual</p>
+        </header>
+
+        <!-- Left to Spend Gauge -->
+        <section class="card">
+            <h2 class="card-title">Disponible para Gastar</h2>
+            <div class="gauge-container">
+                <canvas id="gaugeChart"></canvas>
+                <div class="gauge-value">
+                    <span class="amount">$174.36</span>
+                    <span class="gauge-label">restantes</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planned vs Actual Bar Chart -->
+        <section class="card">
+            <h2 class="card-title">Planeado vs Real</h2>
+            <div class="chart-container">
+                <canvas id="barChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Expenses Breakdown Donut Chart -->
+        <section class="card">
+            <h2 class="card-title">Distribución de Gastos</h2>
+            <div class="chart-container">
+                <canvas id="donutChart"></canvas>
+            </div>
+            <div class="legend-container">
+                <div class="legend-item">
+                    <span class="legend-dot" style="background-color: #10B981;"></span>
+                    <span class="legend-label">Gastos Fijos</span>
+                    <span class="legend-value">9.2%</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot" style="background-color: #EF4444;"></span>
+                    <span class="legend-label">Gastos Variables</span>
+                    <span class="legend-value">25.6%</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot" style="background-color: #F59E0B;"></span>
+                    <span class="legend-label">Ahorros</span>
+                    <span class="legend-value">41.4%</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot" style="background-color: #FCA5A5;"></span>
+                    <span class="legend-label">Deudas</span>
+                    <span class="legend-value">23.8%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Actualizado: <span id="lastUpdate"></span></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
