@@ -1,0 +1,19 @@
+{
+  "name": "finances-bot-dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard financiero para bot de WhatsApp con Jelou",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "finance",
+    "dashboard",
+    "whatsapp",
+    "jelou",
+    "chartjs"
+  ],
+  "author": "",
+  "license": "MIT"
+}
